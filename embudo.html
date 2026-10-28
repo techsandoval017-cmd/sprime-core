@@ -6,9 +6,9 @@
 <title>S-Prime | Manuales de Operación</title>
 <style>
     :root {
-        --neon-h: #FF5500; /* Naranja Halloween */
-        --neon-m: #9D00FF; /* Morado Día de Muertos */
-        --neon-f: #00FFCC; /* Finanzas / S-Prime */
+        --neon-h: #FF5500;
+        --neon-m: #9D00FF;
+        --neon-f: #00FFCC;
         --bg: #050505;
     }
     body {
@@ -18,68 +18,46 @@
         min-height: 100vh; padding-bottom: 50px;
     }
     
-    /* Header Corporativo */
     .header { text-align: center; margin: 40px 0 20px; }
     .header h1 { font-size: 2rem; margin: 0; letter-spacing: 2px; text-transform: uppercase;}
     .header p { color: #888; letter-spacing: 1px; font-size: 0.9rem;}
 
-    /* Contenedor Bento Box (Grid) */
     .bento-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        width: 90%;
-        max-width: 600px;
+        display: grid; grid-template-columns: 1fr; gap: 20px; width: 90%; max-width: 600px;
     }
     
-    /* Diseño de las Tarjetas Cristal (Glassmorphism) */
     .bento-card {
         background: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 25px;
-        display: flex; flex-direction: column;
-        transition: transform 0.3s;
-        overflow: hidden;
-        position: relative;
+        border-radius: 20px; padding: 25px;
+        display: flex; flex-direction: column; transition: transform 0.3s;
     }
     .bento-card:hover { transform: translateY(-5px); }
 
-    /* Imágenes dentro del Bento Box */
     .bento-img-container {
-        display: flex; gap: 10px; margin-bottom: 15px; overflow-x: auto;
-        padding-bottom: 5px;
+        display: flex; gap: 10px; margin-bottom: 15px; overflow-x: auto; padding-bottom: 5px;
     }
     .bento-img-container img {
         width: 120px; height: 120px; border-radius: 12px; object-fit: cover;
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
     
-    /* Textos dentro de la tarjeta */
     .card-title { font-size: 1.5rem; font-weight: 900; margin: 0 0 10px; text-transform: uppercase; }
     .card-desc { color: #ccc; font-size: 0.95rem; line-height: 1.4; margin-bottom: 20px;}
     
-    /* Botones de Acción */
     .btn {
         padding: 15px; border-radius: 12px; text-align: center; text-decoration: none;
         font-weight: bold; font-size: 1.1rem; color: white; transition: all 0.3s;
         text-transform: uppercase; letter-spacing: 1px;
     }
     .btn-halloween { background: rgba(255, 85, 0, 0.2); border: 1px solid var(--neon-h); text-shadow: 0 0 5px var(--neon-h);}
-    .btn-halloween:hover { background: var(--neon-h); box-shadow: 0 0 20px var(--neon-h); }
-
     .btn-muertos { background: rgba(157, 0, 255, 0.2); border: 1px solid var(--neon-m); text-shadow: 0 0 5px var(--neon-m);}
-    .btn-muertos:hover { background: var(--neon-m); box-shadow: 0 0 20px var(--neon-m); }
-
     .btn-finanzas { background: rgba(0, 255, 204, 0.1); border: 1px solid var(--neon-f); margin-top: 10px; }
-    .btn-finanzas:hover { background: rgba(0, 255, 204, 0.3); box-shadow: 0 0 15px var(--neon-f); }
-
-    /* Bordes brillantes por temática */
+    
     .borde-halloween { border-top: 3px solid var(--neon-h); }
     .borde-muertos { border-top: 3px solid var(--neon-m); }
     .borde-finanzas { border-top: 3px solid var(--neon-f); }
-
 </style>
 </head>
 <body>
@@ -96,14 +74,14 @@
             <h2 class="card-title" style="color: var(--neon-h);">Operación Halloween</h2>
             <p class="card-desc">Descarga el manual táctico con 5 micro-negocios de alta rentabilidad para fiestas. Incluye recetas, costos y proveedores.</p>
             
-            <!-- 📝 AQUÍ VAN LAS IMÁGENES QUE TE DIO CHATGPT -->
             <div class="bento-img-container">
-                <img src="manzanas_envenenadas.png" alt="Manzanas">
-                <img src="jeringas_sangre.png" alt="Bebidas">
-                <img src="brownies_vidrio.png" alt="Brownies">
+                <!-- Imágenes extraídas directo de la nube -->
+                <img src="https://image.pollinations.ai/prompt/glossy_black_candy_apples_halloween_dark_aesthetic?width=400&height=400&nologo=true" alt="Manzanas">
+                <img src="https://image.pollinations.ai/prompt/fake_blood_bags_and_syringes_halloween_drinks?width=400&height=400&nologo=true" alt="Bebidas">
+                <img src="https://image.pollinations.ai/prompt/halloween_brownies_with_fake_sugar_glass_shards?width=400&height=400&nologo=true" alt="Brownies">
             </div>
 
-            <!-- 📝 SUBE TU PDF A GITHUB Y PON EL ENLACE AQUÍ -->
+            <!-- Botón PDF -->
             <a href="operacion_halloween.pdf" class="btn btn-halloween" download>📥 Descargar Manual PDF</a>
         </div>
 
@@ -112,23 +90,22 @@
             <h2 class="card-title" style="color: var(--neon-m);">Operación Día de Muertos</h2>
             <p class="card-desc">Guía corporativa para vender kits y postres premium a oficinistas y familias. Productos de bajo esfuerzo y alto margen.</p>
             
-            <!-- 📝 AQUÍ VAN LAS IMÁGENES QUE TE DIO CHATGPT -->
             <div class="bento-img-container">
-                <img src="pan_muerto_premium.png" alt="Pan Relleno">
-                <img src="mini_altar.png" alt="Mini Altar">
-                <img src="velas_personalizadas.png" alt="Velas">
+                <!-- Imágenes extraídas directo de la nube -->
+                <img src="https://image.pollinations.ai/prompt/pan_de_muerto_stuffed_with_cream_and_berries_mexican_aesthetic?width=400&height=400&nologo=true" alt="Pan Relleno">
+                <img src="https://image.pollinations.ai/prompt/small_mexican_day_of_the_dead_mini_altar_desk?width=400&height=400&nologo=true" alt="Mini Altar">
+                <img src="https://image.pollinations.ai/prompt/white_prayer_candles_day_of_the_dead_custom_names_mexican?width=400&height=400&nologo=true" alt="Velas">
             </div>
 
-            <!-- 📝 SUBE TU PDF A GITHUB Y PON EL ENLACE AQUÍ -->
+            <!-- Botón PDF -->
             <a href="operacion_muertos.pdf" class="btn btn-muertos" download>📥 Descargar Manual PDF</a>
         </div>
 
-        <!-- BENTO 3: LA TRAMPA FINANCIERA (APALANCAMIENTO) -->
+        <!-- BENTO 3: CAPITALIZACIÓN -->
         <div class="bento-card borde-finanzas">
             <h2 class="card-title" style="color: var(--neon-f);">Capital Inmediato</h2>
             <p class="card-desc">¿No tienes liquidez para comprar tus materiales hoy? Solicita una línea de crédito en 5 minutos (sin buró) y arranca tu negocio este fin de semana.</p>
             
-            <!-- 📝 TUS LINKS DE AFILIADO -->
             <a href="https://bancoplata.mx/amigos/credito/maikyi4guw" target="_blank" class="btn btn-finanzas">💳 Tramitar Plata Card</a>
             <a href="https://nubank.com.mx/mgm/?id=NqpUV0ygX9eRESQrqadkGg&msg=06478&utm_channel=referral&utm_medium=other&utm_source=mgm" target="_blank" class="btn btn-finanzas">🟣 Tramitar Tarjeta NU</a>
             <a href="https://signup.klar.mx/?code=RTLGN0IY&utm_source=Referral&utm_medium=Referral&pid=Referral&utm_campaign=Offer_Screen&c=Offer_Screen" target="_blank" class="btn btn-finanzas">⚫ Invertir con Klar</a>
