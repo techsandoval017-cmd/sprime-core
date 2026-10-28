@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-Prime | Diagnóstico de Motocicletas</title>
+    <style>
+        body { background: #050505; color: #fff; font-family: 'Segoe UI', sans-serif; padding: 30px; margin: 0; }
+        .header { border-bottom: 2px solid #ff0000; padding-bottom: 10px; margin-bottom: 20px; }
+        h1 { color: #ff0000; margin: 0; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .card { background: #111; border: 1px solid #333; padding: 20px; border-radius: 8px; }
+        .btn { background: #ff0000; color: #fff; padding: 10px 20px; text-decoration: none; border: none; font-weight: bold; cursor: pointer; border-radius: 4px; }
+        .btn:hover { background: #cc0000; }
+        .step { display: none; margin-top: 15px; padding: 15px; background: #222; border-left: 4px solid #00ffcc; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚨 PORTAL ROJO: SISTEMA DE DIAGNÓSTICO S-PRIME</h1>
+        <p>Selecciona la unidad dañada para iniciar protocolo de resolución.</p>
+    </div>
+    
+    <div class="grid">
+        <!-- FT 150G 2022 -->
+        <div class="card">
+            <h2>🏍️ FT 150G 2022 (Falla Eléctrica y Crank Roto)</h2>
+            <p>Objetivo: Encender la moto puenteando el sistema o diagnosticando la chispa.</p>
+            <button class="btn" onclick="document.getElementById('ft150g_steps').style.display='block'">Iniciar Diagnóstico Eléctrico</button>
+            <div id="ft150g_steps" class="step">
+                <h3>Paso 1: Batería y Fusible Principal</h3>
+                <p>1. Pon el multímetro en 20V DC. Mide la batería. Debe marcar al menos 12.4V.<br>
+                   2. Si hay voltaje, revisa el fusible principal (cerca del solenoide/chanchita de arranque). ¿Está fundido?</p>
+                <h3>Paso 2: CDI y Estator (Si la batería está bien pero no hay chispa)</h3>
+                <p>1. Desconecta el CDI. Multímetro en Continuidad. Revisa el cable verde (Tierra) contra el chasis.<br>
+                   2. Multímetro en 200 Ohms. Mide la bobina captora (Cable azul/blanco a tierra). Debe marcar entre 120-150 ohms.</p>
+                <h3>Paso 3: Arranque Directo (Bypass del botón)</h3>
+                <p>Como no tienes crank, pon la llave en ON, asegúrate de estar en Neutral. Toma un desarmador grueso con mango de plástico y toca los dos postes principales metálicos del solenoide de arranque (chanchita). Si el motor de arranque gira, tu problema es el botón del manillar o el cableado del switch.</p>
+            </div>
+        </div>
+
+        <!-- FT 150 TS 2020 -->
+        <div class="card">
+            <h2>🏍️ FT 150 TS 2020 (Fallo de Compresión / No enciende)</h2>
+            <p>Objetivo: Confirmar pérdida de compresión antes de abrir el motor.</p>
+            <button class="btn" onclick="document.getElementById('ft150ts_steps').style.display='block'">Iniciar Diagnóstico de Motor</button>
+            <div id="ft150ts_steps" class="step">
+                <h3>Paso 1: Prueba Rápida sin Manómetro</h3>
+                <p>1. Quita la bujía.<br>
+                   2. Pon el dedo pulgar tapando el hueco de la bujía fuertemente.<br>
+                   3. Intenta dar marcha o patear el crank. La presión debe botar tu dedo con fuerza. Si apenas se siente soplido, las válvulas están torcidas o los anillos muertos. Hay que abrir la cabeza del cilindro.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

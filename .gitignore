@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+__pycache__/
+*.pyc
+.venv/
+env/
+*.log
+.DS_Store
+.env
+credenciales_maestras.env
+=======
+.aider*
+.env
+
+# Archivos confidenciales protegidos
+credenciales_maestras.env
+*.env
+*.log
+__pycache__/
+>>>>>>> dd4d7f84fa9996d9f1903c15e050576fbed165ff
+*.env
+credenciales*.env
